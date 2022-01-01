@@ -1,0 +1,90 @@
+body {
+    overflow-y: hidden;
+    background-color: aliceblue;
+}
+
+section {
+    width: 60vw;
+    height: 60vh;
+    position: absolute;
+    bottom: -600px;
+    margin-left:15%;
+    display: flex;
+    background-color: white;
+}
+
+.pop{
+    animation: 2s popup;
+    animation-fill-mode: forwards;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+}
+
+.right{
+    display: flex;
+    flex-direction:column;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    
+}
+.exit{
+position: absolute;
+right:20px;
+font-size: 2em;
+cursor: pointer;
+
+}
+button {
+    color: white;
+    background-color: black;
+    width: 250px;
+    height: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+}
+
+.popdown {
+    animation:1s popdown;
+    animation-fill-mode: forwards;
+}
+
+h1 {
+    font-size: 3em;
+}
+@keyframes popup {
+    0% {
+    opacity: .3;
+    transform: scale(.3);
+    }
+
+    100% {
+    opacity: 1;
+    transform: scale(1);
+    bottom:200px;
+    }
+}
+
+@keyframes popdown {
+    0% {
+        transform: scale(1);
+        bottom: 200px;
+    }
+    
+    100% {
+        transform: scale(.3);
+        bottom: -600px;
+    }
+}
